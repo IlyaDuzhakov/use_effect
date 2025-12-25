@@ -9,7 +9,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
 
-
   useEffect(() => {
     fetch(
       `https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/users.json`
@@ -19,7 +18,7 @@ function App() {
   }, []);
 
   const selectUser = (id) => {
-    if (id === selectedId) return; 
+    if (id === selectedId) return;
     setSelectedId(id);
     setLoading(true);
     fetch(
@@ -28,18 +27,14 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setUserDetails(data);
-        setLoading(false)
+        setLoading(false);
       });
-
-    // const response = fetch(`https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/${info.id}.json`)
-    // const rezult = response.json()
-    // setUserDetails(rezult)
   };
 
   return (
     <div className="App">
-      <List users={users} select={selectUser} selectedId={selectedId}/>
-      <Details info={userDetails} loading={loading}/>
+      <List users={users} select={selectUser} selectedId={selectedId} />
+      <Details info={userDetails} loading={loading} />
     </div>
   );
 }
