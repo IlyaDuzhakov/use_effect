@@ -6,6 +6,23 @@ In the project directory, you can run:
 ### `npm test`
 ### `npm run build`
 
-Отправляем fetch запрос на сервер, чтобы получить список пользователей. На странице отображаем список пользователей, при нажатии на любого пользователя отображается подробная информация о нём. При повторном клике на одного и того же пользователя запрос не отправляется повторно.
+# User Profile Viewer
 
-В проекте используется: useState, useEffect.
+![Preview](./screenshots/users-preview.png)
+
+## Project Description
+
+We send a fetch request to the server to get a list of users.
+
+The page displays a list of users, and when clicking on any user, detailed information about that user is shown.
+
+When clicking on the same user again, the request is not sent repeatedly.
+
+## Technologies Used
+
+- React
+- JavaScript
+- useState
+- useEffect
+- Fetch API
+- CSS
